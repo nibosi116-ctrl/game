@@ -14,11 +14,11 @@ const enemy = {
     turn: 0,
 
     actions: [
-        { type: "attack", value: 10 },
-        { type: "attack", value: 10 },
+        { type: "attack", value: 15 },
+        { type: "attack", value: 15 },
         { type: "charge" },
         { type: "attack", value: 30 },
-        { type: "attack", value: 10 }
+        { type: "attack", value: 15 }
     ],
 
     vulnerable: false
