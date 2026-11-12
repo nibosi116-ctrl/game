@@ -1,0 +1,304 @@
+/* =========================
+   共通
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f2f2f2;
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+    padding:10px;
+}
+
+/* =========================
+   横向きレイアウト
+========================= */
+
+.container{
+
+    display:flex;
+
+    gap:10px;
+
+    min-height:95vh;
+}
+
+.panel{
+
+    background:white;
+
+    border:1px solid #cccccc;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    box-shadow:
+        0 2px 6px rgba(
+            0,
+            0,
+            0,
+            0.1
+        );
+}
+
+.left-panel{
+    width:240px;
+}
+
+.center-panel{
+    flex:1;
+}
+
+.right-panel{
+    width:280px;
+}
+
+/* =========================
+   見出し
+========================= */
+
+h2{
+    margin-bottom:10px;
+}
+
+h3{
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+/* =========================
+   情報ボックス
+========================= */
+
+.info-box{
+
+    background:#fafafa;
+
+    border:1px solid #dddddd;
+
+    border-radius:8px;
+
+    padding:10px;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   HP
+========================= */
+
+.hp-box{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   敵行動
+========================= */
+
+#enemyAction{
+
+    color:#cc0000;
+
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+/* =========================
+   ボタン
+========================= */
+
+button{
+
+    background:#1976d2;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    padding:10px 16px;
+
+    font-size:14px;
+
+    cursor:pointer;
+
+    margin-right:5px;
+
+    margin-bottom:5px;
+}
+
+button:hover{
+
+    background:#1565c0;
+}
+
+button:disabled{
+
+    background:#999999;
+
+    cursor:not-allowed;
+}
+
+/* =========================
+   ログ
+========================= */
+
+#logArea{
+
+    margin-top:15px;
+}
+
+#log{
+
+    background:#111111;
+
+    color:#00ff66;
+
+    height:220px;
+
+    overflow-y:auto;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    font-size:14px;
+}
+
+/* =========================
+   カードエリア
+========================= */
+
+#cardArea{
+
+    margin-top:15px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:8px;
+}
+
+/* =========================
+   カード
+========================= */
+
+.card{
+
+    background:white;
+
+    border:2px solid #bdbdbd;
+
+    border-radius:8px;
+
+    text-align:center;
+
+    padding:10px;
+
+    min-height:80px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:
+        transform 0.15s,
+        background 0.15s;
+}
+
+.card:hover{
+
+    transform:translateY(-2px);
+
+    background:#fff8d6;
+}
+
+.card.selected{
+
+    border:3px solid orange;
+
+    background:#ffe39a;
+}
+
+.card.used{
+
+    background:#d0d0d0;
+
+    color:#666666;
+
+    cursor:not-allowed;
+}
+
+/* =========================
+   カード種別
+========================= */
+
+.attack{
+
+    border-color:#d32f2f;
+}
+
+.buff{
+
+    border-color:#1565c0;
+}
+
+.barrier{
+
+    border-color:#2e7d32;
+}
+
+/* =========================
+   モバイル対応
+========================= */
+
+@media(max-width:900px){
+
+    .container{
+
+        flex-direction:column;
+    }
+
+    .left-panel,
+    .right-panel{
+
+        width:100%;
+    }
+
+    #cardArea{
+
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    #cardArea{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .hp-box{
+
+        font-size:20px;
+    }
+}

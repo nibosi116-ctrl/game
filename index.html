@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カードバトル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 左パネル -->
+    <div class="panel left-panel">
+
+        <h2>ステージ情報</h2>
+
+        <div class="info-box">
+            <p>自分HP：40</p>
+            <p>敵HP：65</p>
+        </div>
+
+        <h3>手札</h3>
+
+        <div class="info-box">
+            <p>攻撃 ×5</p>
+            <p>バフ ×3</p>
+            <p>バリア ×1</p>
+        </div>
+
+        <h3>ターン順</h3>
+
+        <div class="info-box">
+            <p>プレイヤー行動</p>
+            <p>↓</p>
+            <p>敵行動</p>
+        </div>
+
+    </div>
+
+    <!-- 中央パネル -->
+    <div class="panel center-panel">
+
+        <h2>カードバトル</h2>
+
+        <div id="enemyArea">
+
+            <div class="hp-box">
+                敵HP：
+                <span id="enemyHp">65</span>
+                /
+                65
+            </div>
+
+            <div id="enemyAction">
+                次の行動：
+                10ダメージ
+            </div>
+
+        </div>
+
+        <div id="playerArea">
+
+            <div class="hp-box">
+                自分HP：
+                <span id="playerHp">40</span>
+                /
+                40
+            </div>
+
+        </div>
+
+        <button id="useButton">
+            カードを使う
+        </button>
+
+        <div id="logArea">
+
+            <h3>ログ</h3>
+
+            <div id="log"></div>
+
+        </div>
+
+        <div id="cardArea">
+
+        </div>
+
+    </div>
+
+    <!-- 右パネル -->
+    <div class="panel right-panel">
+
+        <h2>コンボ一覧</h2>
+
+        <div class="info-box">
+
+            <p>
+                攻撃
+                →
+                6ダメージ
+            </p>
+
+            <p>
+                攻撃＋攻撃
+                →
+                16ダメージ
+            </p>
+
+            <p>
+                攻撃＋バフ
+                →
+                12ダメージ
+            </p>
+
+            <p>
+                バフ＋バフ
+                →
+                効果なし
+            </p>
+
+            <p>
+                バリア
+                →
+                3ターン被ダメ半減
+            </p>
+
+        </div>
+
+        <h2>敵行動一覧</h2>
+
+        <div class="info-box">
+
+            <p>1：10ダメージ</p>
+
+            <p>2：10ダメージ</p>
+
+            <p>
+                3：チャージ
+                <br>
+                次のターン中
+                敵が受けるダメージ2倍
+            </p>
+
+            <p>4：30ダメージ</p>
+
+            <p>5：10ダメージ</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
